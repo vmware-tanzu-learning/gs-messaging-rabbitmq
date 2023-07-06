@@ -17,7 +17,7 @@ You will build an application that publishes a message by using Spring AMQP's
 
 With any messaging-based application, you need to create a receiver that responds to
 published messages. The following listing (from
-`src/main/java/com.example.messagingrabbitmq/Receiver.java`) shows how to do so:
+`complete/src/main/java/com.example.messagingrabbitmq/Receiver.java`) shows how to do so:
 
 ====
 [source,java,tabsize=2]
@@ -47,8 +47,8 @@ reducing the amount of code you have to write.
 
 You will use `RabbitTemplate` to send messages, and you will register a `Receiver` with
 the message listener container to receive messages. The connection factory drives both,
-letting them connect to the RabbitMQ server. The following listing (fromq
-`src/main/java/com.example.messagingrabbitmq/MessagingRabbitApplication.java`) shows how
+letting them connect to the RabbitMQ server. The following listing (from
+`complete/src/main/java/com.example.messagingrabbitmq/MessagingRabbitApplication.java`) shows how
 to create the application class:
 
 ====
@@ -88,7 +88,7 @@ In this case, we use a topic exchange, and the queue is bound with a routing key
 
 In this sample, test messages are sent by a `CommandLineRunner`, which also waits for the
 latch in the receiver and closes the application context. The following listing (from
-`src/main/java/com.example.messagingrabbitmq/Runner.java`) shows how it works:
+`complete/src/main/java/com.example.messagingrabbitmq/Runner.java`) shows how it works:
 
 ====
 [source,java,tabsize=2]
